@@ -13,7 +13,7 @@
 </head>
 <body class="en">
 
-    <header class="header header-home d-flex">
+    <header class="header header-home d-lg-block d-flex">
         <a href="" class="header_logo">
             <svg width="134" height="50" viewBox="0 0 134 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_155_18)">
@@ -37,10 +37,10 @@
         </a>
         <nav class="header_nav d-lg-flex align-items-center">
             <ul class="d-lg-flex align-items-center">
-                <li><a>SERVICE</a></li>
-                <li><a>WORKS</a></li>
-                <li><a>ABOUT US</a></li>
-                <li><a>CONTACT US</a></li>
+                <li><a class="gotoelement gotoelement-service" data-target="#service">SERVICE</a></li>
+                <li><a class="gotoelement gotoelement-works" data-target="#works">WORKS</a></li>
+                <li><a class="gotoelement gotoelement-about" data-target="#about">ABOUT US</a></li>
+                <li><a class="gotoelement gotoelement-contact" data-target="#contact">CONTACT US</a></li>
             </ul>
             <div class="header_nav_lang">
                 <div class="header_nav_lang_active d-flex align-items-center justify-content-center">
@@ -56,7 +56,7 @@
                 </div>
             </div>
         </nav>
-        <div class="d-flex">
+        <div class="d-flex header_right">
             <div class="header_lang">
                 <div class="header_lang_active d-flex align-items-center justify-content-center">
                     <img class="header_lang_globe" src="../public/img/globe.svg" alt="">
@@ -95,7 +95,7 @@
             </div>
         </div>
 
-        <section class="section service">
+        <section class="section service" id="service">
             <div class="container">
                 <h2 class="title title-service">SERVICE</h2>
                 <div class="row">
@@ -233,13 +233,13 @@
             </div>
         </section>
 
-        <section class="section works">
+        <section class="section works" id="works">
             <img class="works_top d-sm-block d-none" src="../public/img/works-top.png" alt="">
             <img class="works_top d-sm-none" src="../public/img/works-top-m.png" alt="">
             <div class="container">
                 <h2 class="title title-works">WORKS</h2>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6">
+                <div class="row" data-aos="fade-up" data-aos-duration="500">
+                    <div class="col-xl-4 col-sm-6">
                         <a href="" target="_blank" class="works_item">
                             <div class="works_pic">
                                 <img class="works_pic_img" src="../public/img/work-1.png" alt="">
@@ -257,7 +257,25 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-xl-4 col-sm-6">
+                        <a href="" target="_blank" class="works_item">
+                            <div class="works_pic">
+                                <img class="works_pic_img" src="../public/img/work-1.png" alt="">
+                                <div class="works_pic_mask"></div>
+                                <div class="works_pic_circle"></div>
+                                <div class="works_pic_hover">
+                                    <img class="works_pic_hover_logo" src="../public/img/logo-white.svg" alt="">
+                                    <p class="works_pic_hover_catagory">UI Design</p>
+                                    <h3 class="works_pic_hover_name">E.SUN Securities - Financial-friendly Service</h3>
+                                </div>
+                            </div>
+                            <div class="works_text">
+                                <p class="works_text_catagory">UI Design</p>
+                                <h3 class="works_text_name">E.SUN Securities - Financial-friendly Service</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
                         <a href="" target="_blank" class="works_item">
                             <div class="works_pic">
                                 <img class="works_pic_img" src="../public/img/work-1.png" alt="">
@@ -275,7 +293,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-xl-4 col-sm-6">
                         <a href="" target="_blank" class="works_item">
                             <div class="works_pic">
                                 <img class="works_pic_img" src="../public/img/work-1.png" alt="">
@@ -293,7 +311,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-xl-4 col-sm-6">
                         <a href="" target="_blank" class="works_item">
                             <div class="works_pic">
                                 <img class="works_pic_img" src="../public/img/work-1.png" alt="">
@@ -311,25 +329,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="" target="_blank" class="works_item">
-                            <div class="works_pic">
-                                <img class="works_pic_img" src="../public/img/work-1.png" alt="">
-                                <div class="works_pic_mask"></div>
-                                <div class="works_pic_circle"></div>
-                                <div class="works_pic_hover">
-                                    <img class="works_pic_hover_logo" src="../public/img/logo-white.svg" alt="">
-                                    <p class="works_pic_hover_catagory">UI Design</p>
-                                    <h3 class="works_pic_hover_name">Personal Website</h3>
-                                </div>
-                            </div>
-                            <div class="works_text">
-                                <p class="works_text_catagory">UI Design</p>
-                                <h3 class="works_text_name">Personal Website</h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-xl-4 col-sm-6">
                         <a href="" target="_blank" class="works_item">
                             <div class="works_pic">
                                 <img class="works_pic_img" src="../public/img/work-1.png" alt="">
@@ -360,7 +360,7 @@
             <img class="works_bottom d-sm-none" src="../public/img/works-bottom-m.png" alt="">
         </section>
 
-        <section class="section about">
+        <section class="section about" id="about">
             <h2 class="title title-about">ABOUT US</h2>
             <div class="about_content d-lg-flex align-items-center">
                 <div class="about_pic" data-aos="fade-up" data-aos-duration="500">
@@ -378,44 +378,44 @@
             </div>
         </section>
 
-        <section class="section contact">
+        <section class="section contact" id="contact">
             <h2 class="title title-contact">CONTACT US</h2>
-            <form action="" class="contact_form" data-aos="fade-up" data-aos-duration="500">
+            <form action="" class="contact_form" data-aos="fade-up" data-aos-duration="500" onsubmit="sendEmail(); reset(); return false">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Name*</label>
-                            <input type="text" class="contact_form_input">
+                            <input type="text" class="contact_form_input" id="name" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Email*</label>
-                            <input type="email" class="contact_form_input">
+                            <input type="email" class="contact_form_input" id="email" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Whatsapp</label>
-                            <input type="text" class="contact_form_input">
+                            <input type="text" class="contact_form_input" id="whatsapp">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Line ID</label>
-                            <input type="text" class="contact_form_input">
+                            <input type="text" class="contact_form_input" id="lineid">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="contact_form_item">
                             <label for="">Title</label>
-                            <input type="text" class="contact_form_input">
+                            <input type="text" class="contact_form_input" id="title">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="contact_form_item">
                             <label for="">Content*</label>
-                            <textarea name="" id="" class="contact_form_input"></textarea>
+                            <textarea class="contact_form_input" id="content" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -434,7 +434,7 @@
                 <img class="footer_bg d-sm-none" src="../public/img/footer_bg-sm.svg" alt="">
                 <div class="footer_content">
                     <div class="d-flex align-items-center justify-content-md-end footer_link">
-                        <a href="">
+                        <a href="https://line.me/ti/p/D9005fCHo7" target="_blank">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_206_170)">
                                     <path d="M9.5 0.395874C4.26313 0.395874 0 3.87762 0 8.15658C0 11.989 3.38042 15.2 7.94438 15.8104C8.25392 15.8761 8.67508 16.0162 8.78196 16.2807C8.87696 16.5205 8.8445 16.891 8.81204 17.1412L8.68221 17.9535C8.64658 18.1933 8.49221 18.8979 9.51267 18.4672C10.5347 18.0382 14.9878 15.2183 16.9828 12.9105C18.3477 11.4064 19 9.865 19 8.15658C19 3.87762 14.7369 0.395874 9.5 0.395874ZM5.78154 10.701H3.89262C3.6195 10.701 3.39388 10.4738 3.39388 10.1999V6.39908C3.39388 6.12437 3.6195 5.89717 3.89262 5.89717C4.16813 5.89717 4.39138 6.12437 4.39138 6.39908V9.69796H5.78154C6.05704 9.69796 6.2795 9.92358 6.2795 10.1999C6.2795 10.4738 6.05625 10.701 5.78154 10.701ZM7.73379 10.1999C7.73379 10.4738 7.51054 10.701 7.23425 10.701C6.96112 10.701 6.73787 10.4738 6.73787 10.1999V6.39908C6.73787 6.12437 6.96112 5.89717 7.23663 5.89717C7.51054 5.89717 7.73379 6.12437 7.73379 6.39908V10.1999ZM12.2788 10.1999C12.2788 10.4152 12.141 10.606 11.9368 10.6749C11.8861 10.6915 11.8315 10.6994 11.7792 10.6994C11.6122 10.6994 11.4697 10.6274 11.3755 10.4999L9.44142 7.85733V10.1991C9.44142 10.473 9.22054 10.7002 8.94188 10.7002C8.66796 10.7002 8.44629 10.473 8.44629 10.1991V6.39908C8.44629 6.18375 8.58325 5.99296 8.78671 5.92487C8.83421 5.90667 8.89438 5.89875 8.94029 5.89875C9.09467 5.89875 9.23717 5.98187 9.33217 6.10142L11.2812 8.75429V6.39908C11.2812 6.12437 11.5045 5.89717 11.78 5.89717C12.0531 5.89717 12.2788 6.12437 12.2788 6.39908V10.1999ZM15.3306 7.79717C15.6069 7.79717 15.8294 8.02437 15.8294 8.29987C15.8294 8.57458 15.6069 8.80179 15.3306 8.80179H13.9413V9.69796H15.3306C15.6069 9.69796 15.8294 9.92358 15.8294 10.1999C15.8294 10.4738 15.6069 10.701 15.3306 10.701H13.4417C13.1686 10.701 12.9453 10.4738 12.9453 10.1999V6.39908C12.9453 6.12437 13.1686 5.89717 13.4441 5.89717H15.333C15.6069 5.89717 15.8294 6.12437 15.8294 6.39908C15.8294 6.67696 15.6069 6.901 15.3306 6.901H13.9413V7.79717H15.3306Z" fill="white"/>
@@ -446,7 +446,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="">
+                        <a href="mailto:yl301114@gmail.com" target="_blank">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_206_174)">
                                     <path d="M11.0879 11.6409C10.6152 11.9561 10.0661 12.1226 9.5 12.1226C8.93393 12.1226 8.38486 11.9561 7.91216 11.6409L0.126506 6.45033C0.0833105 6.42153 0.0412285 6.39151 0 6.36063V14.866C0 15.8412 0.791357 16.6151 1.74908 16.6151H17.2509C18.226 16.6151 19 15.8237 19 14.866V6.3606C18.9587 6.39154 18.9165 6.42164 18.8732 6.45048L11.0879 11.6409Z" fill="white"/>
@@ -459,7 +459,7 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="">
+                        <a href="https://wa.link/6eghzp" target="_blank">
                             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_206_179)">
                                     <path d="M9.50237 0H9.49763C4.25956 0 0 4.26075 0 9.5C0 11.5781 0.66975 13.5043 1.80856 15.0682L0.624625 18.5974L4.27619 17.4301C5.77838 18.4253 7.57031 19 9.50237 19C14.7404 19 19 14.7381 19 9.5C19 4.26194 14.7404 0 9.50237 0ZM15.0302 13.4152C14.801 14.0624 13.8914 14.5991 13.1658 14.7559C12.6694 14.8616 12.0211 14.9459 9.83844 14.041C7.04662 12.8844 5.24875 10.0474 5.10862 9.86337C4.97444 9.67931 3.9805 8.36119 3.9805 6.99794C3.9805 5.63469 4.67281 4.97088 4.95188 4.68587C5.18106 4.45194 5.55988 4.34506 5.92325 4.34506C6.04081 4.34506 6.1465 4.351 6.2415 4.35575C6.52056 4.36762 6.66069 4.38425 6.84475 4.82481C7.07394 5.377 7.63206 6.74025 7.69856 6.88038C7.76625 7.0205 7.83394 7.2105 7.73894 7.39456C7.64988 7.58456 7.5715 7.66887 7.43138 7.83037C7.29125 7.99187 7.15825 8.11537 7.01812 8.28875C6.88987 8.43956 6.745 8.60106 6.9065 8.88013C7.068 9.15325 7.62612 10.0641 8.44788 10.7956C9.50831 11.7396 10.3681 12.0413 10.6756 12.1695C10.9048 12.2645 11.1779 12.2419 11.3454 12.0638C11.5579 11.8346 11.8204 11.4546 12.0876 11.0806C12.2776 10.8122 12.5174 10.7789 12.7692 10.8739C13.0257 10.963 14.383 11.6339 14.6621 11.7729C14.9411 11.913 15.1252 11.9795 15.1929 12.0971C15.2594 12.2146 15.2594 12.7668 15.0302 13.4152Z" fill="white"/>
@@ -479,15 +479,40 @@
     </main>
 
     <div class="sidebtn">
-        <a href="" target="_blank" class="sidebtn_item">
-            <img src="../public/img/email.svg" alt="">
+        <img class="sidebtn_style d-md-none" src="../public/img/fixedbtn-style.svg" alt="">
+        <a href="mailto:yl301114@gmail.com" target="_blank" class="sidebtn_item">
+            <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.409038 15.7227C0.749326 12.2844 2.86801 6.54593 6.46637 3.9796C10.0647 1.41328 14.3141 -0.564152 20.3746 1.05976C27.8849 3.07212 30.4491 5.8356 33.7574 9.85468C39.2587 16.5377 40.3998 23.2928 37.9171 28.8287C35.6618 33.8578 29.2501 36.0002 24.9742 37.04C20.6983 38.0797 12.2339 37.0919 6.53228 32.0985C0.376506 26.7073 -0.0645094 20.5075 0.409038 15.7227Z" fill="#1E969C"/>
+            </svg>
+            <img class="sidebtn_icon" src="../public/img/email.svg" alt="">
         </a>
+        <a href="https://wa.link/6eghzp" target="_blank" class="sidebtn_item">
+            <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.409038 15.7227C0.749326 12.2844 2.86801 6.54593 6.46637 3.9796C10.0647 1.41328 14.3141 -0.564152 20.3746 1.05976C27.8849 3.07212 30.4491 5.8356 33.7574 9.85468C39.2587 16.5377 40.3998 23.2928 37.9171 28.8287C35.6618 33.8578 29.2501 36.0002 24.9742 37.04C20.6983 38.0797 12.2339 37.0919 6.53228 32.0985C0.376506 26.7073 -0.0645094 20.5075 0.409038 15.7227Z" fill="#1E969C"/>
+            </svg>
+            <img class="sidebtn_icon" src="../public/img/whatsapp.svg" alt="">
+        </a>
+        <a href="https://line.me/ti/p/D9005fCHo7" target="_blank" class="sidebtn_item">
+            <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.409038 15.7227C0.749326 12.2844 2.86801 6.54593 6.46637 3.9796C10.0647 1.41328 14.3141 -0.564152 20.3746 1.05976C27.8849 3.07212 30.4491 5.8356 33.7574 9.85468C39.2587 16.5377 40.3998 23.2928 37.9171 28.8287C35.6618 33.8578 29.2501 36.0002 24.9742 37.04C20.6983 38.0797 12.2339 37.0919 6.53228 32.0985C0.376506 26.7073 -0.0645094 20.5075 0.409038 15.7227Z" fill="#1E969C"/>
+            </svg>
+            <img class="sidebtn_icon" src="../public/img/line.svg" alt="">
+        </a>
+        <div class="sidebtn_item btn-top">
+            <svg width="40" height="38" viewBox="0 0 40 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.409038 15.7227C0.749326 12.2844 2.86801 6.54593 6.46637 3.9796C10.0647 1.41328 14.3141 -0.564152 20.3746 1.05976C27.8849 3.07212 30.4491 5.8356 33.7574 9.85468C39.2587 16.5377 40.3998 23.2928 37.9171 28.8287C35.6618 33.8578 29.2501 36.0002 24.9742 37.04C20.6983 38.0797 12.2339 37.0919 6.53228 32.0985C0.376506 26.7073 -0.0645094 20.5075 0.409038 15.7227Z" fill="#1E969C"/>
+            </svg>
+            <span>TOP</span>
+            <img class="sidebtn_top" src="../public/img/top-eyes.svg" alt="">
+        </div>
     </div>
 
     
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/aos/aos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="../public/js/common.js"></script>
+    <script src="../public/js/mail-en.js"></script>
 </body>
 </html>
