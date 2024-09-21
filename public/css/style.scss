@@ -1061,11 +1061,11 @@ input, textarea, button {
         transform: translateY(1px);
     }
     .row {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: -30px;
+        margin-right: -30px;
         >div {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
             &:nth-child(3n) {
                 transform: translateY(-40px);
             }
@@ -1077,12 +1077,13 @@ input, textarea, button {
     &_item {
         position: relative;
         display: block;
-        margin-bottom: 100px;
+        margin-bottom: 120px;
         &:hover {
             .works {
                 &_pic {
                     &_mask {
-                        opacity: 1;
+                        // opacity: 1;
+                        background-color: rgba(0,0,0,0.7);
                     }
                     &_circle {
                         right: 15%;
@@ -1121,11 +1122,11 @@ input, textarea, button {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.7);
+            background-color: rgba(255,255,255,0.35);
             top: 0;
             left: 0;
             transition: 0.5s ease-in-out;
-            opacity: 0;
+            // opacity: 0;
         }
         &_circle {
             position: absolute;
