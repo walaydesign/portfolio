@@ -1179,7 +1179,7 @@ input, textarea, button {
     &_text {
         position: absolute;
         padding: 0 15px;
-        bottom: -35px;
+        bottom: -30px;
         left: 0;
         transition: 0.5s ease-in-out;
         &_catagory {
@@ -1192,6 +1192,7 @@ input, textarea, button {
             font-weight: 600;
             width: fit-content;
             box-shadow: $box-shaow;
+            font-size: 12px;
         }
         &_name {
             margin: 0;
@@ -1199,7 +1200,7 @@ input, textarea, button {
             border-radius: 0 35px 35px 35px;
             background-color: #fff;
             color: $gray-800;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 500;
             width: fit-content;
             box-shadow: $box-shaow;
