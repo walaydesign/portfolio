@@ -51,9 +51,17 @@ body {
     }
     &.tc {
         font-family: $font-notoTC;
+        .title {
+            font-family: $font-notoTC;
+            font-weight: 700;
+        }
     }
     &.sc {
         font-family: $font-notoSC;
+        .title {
+            font-family: $font-notoSC;
+            font-weight: 700;
+        }
     }
     @media screen and (max-width: 767px) {
         padding-bottom: 50px;
@@ -231,6 +239,7 @@ input, textarea, button {
         cursor: pointer;
         padding: 0 17px;
         transition: $transition;
+        z-index: 10;
         &_active {
             width: 100%;
             // height: 100%;
@@ -255,6 +264,7 @@ input, textarea, button {
             border-top: 1px solid $gray-200;
             // padding: 15px 0;
             visibility: hidden;
+            z-index: 10;
             ul {
             }
             li {
@@ -599,8 +609,11 @@ input, textarea, button {
             display: none;
         }
         &_menu {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            .bar {
+                width: 18px;
+            }
         }
         &.scrolldown {
             padding: 0 20px;
@@ -854,7 +867,6 @@ input, textarea, button {
                     height: 189px;
                     margin-top: 15px;
                     margin-bottom: 15px;
-                    // transform: translateY(15px);
                     >svg {
                         width: 230px;
                         height: 189px;
@@ -872,7 +884,6 @@ input, textarea, button {
                     height: 172px;
                     margin-top: 25px;
                     margin-bottom: 25px;
-                    // transform: translateY(25px);
                     >svg {
                         width: 228px;
                         height: 172px;
@@ -890,7 +901,6 @@ input, textarea, button {
                     height: 166px;
                     margin-top: 25px;
                     margin-bottom: 25px;
-                    // transform: translateY(25px);
                     >svg {
                         width: 235px;
                         height: 166px;
@@ -917,28 +927,6 @@ input, textarea, button {
                                 }
                             }
                         }
-                        &:hover {
-                            >svg {
-                                path {
-                                    &.front {
-                                        fill: $secondary-100;
-                                        transform: rotate(-15deg);
-                                    }
-                                    &.back {
-                                        fill: $secondary-400;
-                                        transform: rotate(15deg);
-                                    }
-                                }
-                            }
-                            .service_pic_icon {
-                                .service_pic_icon_line {
-                                    fill: $secondary-600;
-                                }
-                                h3 {
-                                    color: $secondary-600;
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -952,28 +940,6 @@ input, textarea, button {
                                 }
                                 &.front {
                                     fill: $primary-600;
-                                }
-                            }
-                        }
-                        &:hover {
-                            >svg {
-                                path {
-                                    &.front {
-                                        fill: $primary-200;
-                                        transform: rotate(-15deg);
-                                    }
-                                    &.back {
-                                        fill: $primary-600;
-                                        transform: rotate(15deg);
-                                    }
-                                }
-                            }
-                            .service_pic_icon {
-                                .service_pic_icon_line {
-                                    fill: $primary-700;
-                                }
-                                h3 {
-                                    color: $primary-700;
                                 }
                             }
                         }
@@ -1028,6 +994,68 @@ input, textarea, button {
             font-weight: 300;
         }
     }
+    @media screen and (min-width: 992px) {
+        .row {
+            >div {
+                &:nth-child(odd) {
+                    .service {
+                        &_pic {
+                            &:hover {
+                                >svg {
+                                    path {
+                                        &.front {
+                                            fill: $secondary-100;
+                                            transform: rotate(-15deg);
+                                        }
+                                        &.back {
+                                            fill: $secondary-400;
+                                            transform: rotate(15deg);
+                                        }
+                                    }
+                                }
+                                .service_pic_icon {
+                                    .service_pic_icon_line {
+                                        fill: $secondary-600;
+                                    }
+                                    h3 {
+                                        color: $secondary-600;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    .service {
+                        &_pic {
+                            &:hover {
+                                >svg {
+                                    path {
+                                        &.front {
+                                            fill: $primary-200;
+                                            transform: rotate(-15deg);
+                                        }
+                                        &.back {
+                                            fill: $primary-600;
+                                            transform: rotate(15deg);
+                                        }
+                                    }
+                                }
+                                .service_pic_icon {
+                                    .service_pic_icon_line {
+                                        fill: $primary-700;
+                                    }
+                                    h3 {
+                                        color: $primary-700;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     @media screen and (max-width: 1399px) {
         >.container {
             max-width: inherit;
@@ -1078,29 +1106,6 @@ input, textarea, button {
         position: relative;
         display: block;
         margin-bottom: 120px;
-        &:hover {
-            .works {
-                &_pic {
-                    &_mask {
-                        // opacity: 1;
-                        background-color: rgba(0,0,0,0.7);
-                    }
-                    &_circle {
-                        right: 15%;
-                        width: 120%;
-                        padding-bottom: 120%;
-                    }
-                    &_hover {
-                        left: 40%;
-                        opacity: 1;
-                    }
-                }
-                &_text {
-                    opacity: 0;
-                    transform: translateX(10%);
-                }
-            }
-        }
     }
     &_pic {
         display: block;
@@ -1144,16 +1149,155 @@ input, textarea, button {
         &_hover {
             position: absolute;
             top: 50%;
-            // left: 40%;
             transform: translate(-50%, -50%);
             transition: 0.5s ease-in-out;
             opacity: 0;
             left: 0%;
             width: 60%;
             &_logo {
-                width: 134px;
+                // width: 134px;
                 display: block;
                 margin: 0 auto 30px;
+                &.logo {
+                    &-kogi {
+                        width: 50px;
+                    }
+                    &-somings {
+                        width: 150px;
+                    }
+                    &-tba {
+                        width: 80px;
+                    }
+                    &-parjet {
+                        width: 110px;
+                    }
+                    &-petstime {
+                        width: 70px;
+                    }
+                    &-pixui {
+                        width: 60px;
+                    }
+                    &-walay {
+                        width: 120px;
+                    }
+                    &-yacenter {
+                        width: 70px;
+                    }
+                    &-richsou {
+                        width: 50px;
+                    }
+                    &-hota {
+                        width: 80px;
+                    }
+                    &-konfu {
+                        width: 130px;
+                    }
+                    &-naturelife {
+                        width: 100px;
+                    }
+                    &-james {
+                        width: 100px;
+                    }
+                    &-fairsun {
+                        width: 140px;
+                    }
+                    &-sdb {
+                        width: 60px;
+                    }
+                    &-dore {
+                        width: 60px;
+                    }
+                    &-business {
+                        width: 50px;
+                    }
+                    &-peiping {
+                        width: 45px;
+                    }
+                    &-dingjin {
+                        width: 90px;
+                    }
+                    &-vieweave {
+                        width: 150px;
+                    }
+                    &-ninecity {
+                        width: 50px;
+                    }
+                    &-ga {
+                        width: 60px;
+                    }
+                    &-yuanmao {
+                        width: 50px;
+                    }
+                    &-dingxin {
+                        width: 100px;
+                    }
+                    &-global {
+                        width: 50px;
+                    }
+                    &-changping {
+                        width: 110px;
+                    }
+                    &-yjfutian {
+                        width: 120px;
+                    }
+                    &-impression {
+                        width: 80px;
+                    }
+                    &-sgcam {
+                        width: 120px;
+                    }
+                    &-yucheng {
+                        width: 55px;
+                    }
+                    &-doublelake {
+                        width: 100px;
+                    }
+                    &-breeze {
+                        width: 130px;
+                    }
+                    &-blueocean {
+                        width: 65px;
+                    }
+                    &-eastern {
+                        width: 50px;
+                    }
+                    &-sparkly {
+                        width: 90px;
+                    }
+                    &-futurelove {
+                        width: 130px;
+                    }
+                    &-neocore {
+                        width: 70px;
+                    }
+                    &-greenscenery {
+                        width: 100px;
+                    }
+                    &-wonders808 {
+                        width: 150px;
+                    }
+                    &-chisu {
+                        width: 70px;
+                    }
+                    &-fuyoung {
+                        width: 50px;
+                    }
+                    &-nt {
+                        width: 90px;
+                    }
+                    &-gladio {
+                        width: 100px;
+                    }
+                    &-tx {
+                        width: 180px;
+                    }
+                    &-iplaza {
+                        width: 120px;
+                    }
+                    &-datung {
+                        width: 80px;
+                    }
+                }
             }
             &_catagory {
                 font-family: $font-signika;
@@ -1162,17 +1306,19 @@ input, textarea, button {
                 text-align: center;
                 margin-bottom: 10px;
                 opacity: 0.7;
+                font-size: 12px;
             }
             &_name {
                 padding: 6px 20px;
                 border-radius: 100px;
                 border: 1px solid #fff;
                 color: #fff;
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 500;
                 margin: 0 auto;
                 text-align: center;
                 width: fit-content;
+                opacity: 0.7;
             }
         }
     }
@@ -1239,28 +1385,13 @@ input, textarea, button {
                 }
             }
         }
-        &:hover {
-            background-color: $primary-600;
-            color: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0,0, 0.4);
-            .works_more_eyes {
-                >img {
-                    &.normal {
-                        opacity: 0;
-                    }
-                    &.hover {
-                        opacity: 1;
-                    }
-                }
-            }
-        }
     }
     &_tab {
         margin-bottom: 60px;
         transition: $transition;
         position: sticky;
         top: 70px;
-        z-index: 10;
+        z-index: 9;
         &_item {
             margin: 0 10px;
             background-color: $gray-100;
@@ -1372,6 +1503,48 @@ input, textarea, button {
                 display: flex !important;
             }
         }
+        &_item {
+            &:hover {
+                .works {
+                    &_pic {
+                        &_mask {
+                            // opacity: 1;
+                            background-color: rgba(0,0,0,0.7);
+                        }
+                        &_circle {
+                            right: 15%;
+                            width: 120%;
+                            padding-bottom: 120%;
+                        }
+                        &_hover {
+                            left: 40%;
+                            opacity: 1;
+                        }
+                    }
+                    &_text {
+                        opacity: 0;
+                        transform: translateX(10%);
+                    }
+                }
+            }
+        }
+        &_more {
+            &:hover {
+                background-color: $primary-600;
+                color: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0,0, 0.4);
+                .works_more_eyes {
+                    >img {
+                        &.normal {
+                            opacity: 0;
+                        }
+                        &.hover {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
     @media screen and (max-width: 1199px) {
         >.container {
@@ -1380,7 +1553,7 @@ input, textarea, button {
         }
         &_text {
             &_name {
-                font-size: 18px;
+                // font-size: 18px;
                 padding: 10px 30px;
             }
         }
@@ -1409,18 +1582,11 @@ input, textarea, button {
     }
     @media screen and (max-width: 991px) {
         &_tab {
+            margin-bottom: 30px;
             &_item {
                 font-size: 14px;
                 margin: 0 7px;
             }
-            &_list {
-                // display: flex !important;
-            }
-        }
-    }
-    @media screen and (max-width: 767px) {
-        >.container {
-            padding: 0 20px;
         }
         .row {
             margin-left: -15px;
@@ -1429,6 +1595,17 @@ input, textarea, button {
                 padding-left: 15px;
                 padding-right: 15px;
             }
+        }
+        >.container {
+            padding: 0 50px;
+        }
+        &-naturelife {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        >.container {
+            padding: 0 20px;
         }
         &_item {
             margin-bottom: 80px;
@@ -1440,7 +1617,6 @@ input, textarea, button {
             padding: 0 20px;
             &_list {
                 display: none;
-                // display: block;
                 position: absolute;
                 padding: 15px 35px;
                 width: 100%;
@@ -1449,7 +1625,6 @@ input, textarea, button {
                 z-index: 1;
             }
             &_item {
-                // border-radius: ;
                 margin: 0;
                 background-color: transparent;
                 transition: none;
@@ -1579,7 +1754,7 @@ input, textarea, button {
             }
             p {
                 margin: 0;
-                font-size: 16px;
+                font-size: 14px;
                 opacity: 0.8;
                 .br {
                     display: none;
@@ -1597,6 +1772,47 @@ input, textarea, button {
             line-height: 1.8;
             .br {
                 display: none;
+            }
+        }
+    }
+    &_link {
+        margin-top: 8px;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.8);
+            width: 28px;
+            height: 28px;
+            margin-right: 8px;
+            transition: $transition;
+            svg {
+                width: 14px;
+                height: 14px;
+                path {
+                    transition: $transition;
+                }
+            }
+            &:hover {
+                background-color: #fff;
+                border-color: #fff;
+                &.about_link {
+                    &_behance {
+                        svg {
+                            path {
+                                fill: #0057FF;
+                            }
+                        }
+                    }
+                    &_linkedin {
+                        svg {
+                            path {
+                                fill: #0B65C2;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -1745,14 +1961,18 @@ input, textarea, button {
                 transition: $transition;
             }
         }
-        &:hover {
-            background-color: $secondary-400;
-            span {
-                color: #fff;
-            }
-            svg {
-                path {
-                    fill: #fff;
+    }
+    @media screen and (min-width: 991px) {
+        button {
+            &:hover {
+                background-color: $secondary-400;
+                span {
+                    color: #fff;
+                }
+                svg {
+                    path {
+                        fill: #fff;
+                    }
                 }
             }
         }
@@ -1813,14 +2033,6 @@ input, textarea, button {
                     transition: $transition;
                 }
             }
-            &:hover {
-                background-color: #fff;
-                svg {
-                    path {
-                        fill: $secondary-400
-                    }
-                }
-            }
             &:first-child {
                 margin-left: 0;
             }
@@ -1835,6 +2047,20 @@ input, textarea, button {
     }
     &-inner {
         position: relative;
+    }
+    @media screen and (min-width: 992px) {
+        &_link {
+            a {
+                &:hover {
+                    background-color: #fff;
+                    svg {
+                        path {
+                            fill: $secondary-400
+                        }
+                    }
+                }
+            }
+        }
     }
     @media screen and (max-width: 991px) {
         padding-right: 50px;
@@ -1895,22 +2121,6 @@ input, textarea, button {
             font-weight: 500;
             transition: $transition;
         }
-        &:hover {
-            transform: rotate(20deg);
-            path {
-                fill: $primary-800;
-            }
-        }
-        &.btn-top {
-            &:hover {
-                span {
-                    opacity: 0;
-                }
-                .sidebtn_top {
-                    opacity: 1;
-                }
-            }
-        }
     }
     &_icon {
         position: absolute;
@@ -1943,6 +2153,26 @@ input, textarea, button {
                 &:hover {
                     path {
                         fill: $secondary-600;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 992px) {
+        &_item {
+            &:hover {
+                transform: rotate(20deg);
+                path {
+                    fill: $primary-800;
+                }
+            }
+            &.btn-top {
+                &:hover {
+                    span {
+                        opacity: 0;
+                    }
+                    .sidebtn_top {
+                        opacity: 1;
                     }
                 }
             }

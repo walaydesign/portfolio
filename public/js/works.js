@@ -40,4 +40,22 @@ $(".works_tab_item").click(function() {
         $(".works_item-wrap").hide();
         $(".works-wordpress").show();
     }
+
+    let headHeight;
+    if($(window).width() > 500) {
+        headHeight = $(".page-head").height() + 175*2 + 50 - 70 + 1;
+    }else {
+        headHeight = $(".page-head").height() + 120*2 + 50 - 70 + 1;
+    }
+
+    if($(window).scrollTop() > headHeight) {
+        $("html, body").animate({scrollTop:headHeight},100);
+    }
+
+    if($(window).width() < 768) {
+        let worksActive = $(this).text();
+        $(".works_tab_active_text").text(worksActive);
+        $(".works_tab_list").slideUp(300);
+        $(".works_tab").removeClass("active");
+    }
 })
