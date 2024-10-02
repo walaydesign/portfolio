@@ -13,7 +13,7 @@ body.tc {
   font-family: "Noto Sans TC", system-ui;
 }
 
-body.tc .title {
+body.tc .title, body.tc .page-title {
   font-family: "Noto Sans TC", system-ui;
   font-weight: 700;
 }
@@ -22,7 +22,7 @@ body.sc {
   font-family: "Noto Sans SC", sans-serif;
 }
 
-body.sc .title {
+body.sc .title, body.sc .page-title {
   font-family: "Noto Sans SC", sans-serif;
   font-weight: 700;
 }
@@ -1858,8 +1858,12 @@ input, textarea, button {
   position: relative;
 }
 
-.about_pic > img {
+.about_pic_img {
   width: 100%;
+}
+
+.about_pic_img.m {
+  display: none;
 }
 
 .about_pic_text {
@@ -1976,7 +1980,8 @@ input, textarea, button {
     background-position: center 75%;
   }
   .about_pic_text {
-    right: 29%;
+    top: 18%;
+    right: 30%;
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
   }
@@ -1994,7 +1999,24 @@ input, textarea, button {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
+  .about_pic_img.pc {
+    display: none;
+  }
+  .about_pic_img.m {
+    display: block;
+  }
+  .about_pic_text {
+    top: 25%;
+    right: 28%;
+  }
+  .about_pic_text h3, .about_pic_text p {
+    -webkit-transform: translateX(-9%);
+            transform: translateX(-9%);
+  }
+}
+
+@media screen and (max-width: 410px) {
   .about {
     background-image: url(../img/about_bg-sm.svg);
     background-size: 500px;

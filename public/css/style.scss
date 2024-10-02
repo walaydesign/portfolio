@@ -51,14 +51,14 @@ body {
     }
     &.tc {
         font-family: $font-notoTC;
-        .title {
+        .title, .page-title {
             font-family: $font-notoTC;
             font-weight: 700;
         }
     }
     &.sc {
         font-family: $font-notoSC;
-        .title {
+        .title, .page-title {
             font-family: $font-notoSC;
             font-weight: 700;
         }
@@ -1739,8 +1739,11 @@ input, textarea, button {
     &_pic {
         width: 50%;
         position: relative;
-        >img {
+        &_img {
             width: 100%;
+            &.m {
+                display: none;
+            }
         }
         &_text {
             position: absolute;
@@ -1841,7 +1844,8 @@ input, textarea, button {
         background-position: center 75%;
         &_pic {
             &_text {
-                right: 29%;
+                top: 18%;
+                right: 30%;
                 transform: translateX(50%);
             }
         }
@@ -1859,12 +1863,32 @@ input, textarea, button {
             }
         }
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
+        &_pic {
+            &_img {
+                &.pc {
+                    display: none;
+                }
+                &.m {
+                    display: block;
+                }
+            }
+            &_text {
+                top: 25%;
+                right: 28%;
+                h3, p {
+                    transform: translateX(-9%);
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 410px) {
         background-image: url(../img/about_bg-sm.svg);
         background-size: 500px;
         background-position: center 75%;
         &_pic {
             &_text {
+                // top: 15%;
                 h3 {
                     font-size: 20px;
                 }
