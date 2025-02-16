@@ -1033,6 +1033,19 @@ input, textarea, button {
   transition: 0.3s ease-in-out;
 }
 
+.service_pic h2 {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .service_list {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1064,6 +1077,9 @@ input, textarea, button {
   .service .row > div:nth-child(odd) .service_pic:hover .service_pic_icon h3 {
     color: #1E969C;
   }
+  .service .row > div:nth-child(odd) .service_pic:hover h2 {
+    color: #0D8288;
+  }
   .service .row > div:nth-child(even) .service_pic:hover > svg path.front {
     fill: #FFEAC2;
     -webkit-transform: rotate(-15deg);
@@ -1080,6 +1096,9 @@ input, textarea, button {
   .service .row > div:nth-child(even) .service_pic:hover .service_pic_icon h3 {
     color: #EA9A00;
   }
+  .service .row > div:nth-child(even) .service_pic:hover h2 {
+    color: #EA9A00;
+  }
 }
 
 @media screen and (max-width: 1399px) {
@@ -1091,6 +1110,12 @@ input, textarea, button {
 @media screen and (max-width: 1199px) {
   .service_item {
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .service_pic h2 {
+    font-size: 20px;
   }
 }
 
@@ -2489,6 +2514,65 @@ input, textarea, button {
 @media screen and (max-width: 500px) {
   .page-title {
     font-size: 48px;
+  }
+}
+
+.home-top {
+  padding: 7vw 0;
+  background-color: #FFAD0D;
+}
+
+.home-top_logo {
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-lang {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 991px) {
+  .home-top_logo {
+    width: 200px;
+  }
+  .home-lang {
+    margin-top: 30px;
+  }
+  .home-lang .service_item.graphic .service_pic {
+    width: 181px;
+    height: 147px;
+  }
+  .home-lang .service_item.graphic .service_pic > svg {
+    width: 181px;
+    height: 147px;
+  }
+  .home-lang .service_item.ui .service_pic {
+    width: 161px;
+    height: 132px;
+  }
+  .home-lang .service_item.ui .service_pic > svg {
+    width: 161px;
+    height: 132px;
+  }
+  .home-lang .service_item.web .service_pic {
+    width: 160px;
+    height: 120px;
+  }
+  .home-lang .service_item.web .service_pic > svg {
+    width: 160px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .home-top {
+    padding: 5vw 0 0;
+  }
+  .home-top_logo {
+    width: 150px;
   }
 }
 /*# sourceMappingURL=style.css.map */

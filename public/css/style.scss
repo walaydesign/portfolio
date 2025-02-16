@@ -983,6 +983,17 @@ input, textarea, button {
                 transition: $transition;
             }
         }
+        h2 {
+            margin: 0;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &_list {
         width: fit-content;
@@ -1021,6 +1032,9 @@ input, textarea, button {
                                         color: $secondary-600;
                                     }
                                 }
+                                h2 {
+                                    color: $secondary-700;
+                                }
                             }
                         }
                     }
@@ -1049,6 +1063,9 @@ input, textarea, button {
                                         color: $primary-700;
                                     }
                                 }
+                                h2 {
+                                    color: $primary-700;
+                                }
                             }
                         }
                     }
@@ -1064,6 +1081,13 @@ input, textarea, button {
     @media screen and (max-width: 1199px) {
         &_item {
             margin-bottom: 40px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_pic {
+            h2 {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -2279,5 +2303,72 @@ input, textarea, button {
     }
     @media screen and (max-width: 500px) {
         font-size: 48px;
+    }
+}
+
+.home {
+    &-top {
+        padding: 7vw 0;
+        background-color: $primary-600;
+        &_logo {
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &-lang {
+        max-width: 1000px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 991px) {
+        &-top {
+            &_logo {
+                width: 200px;
+            }
+        }
+        &-lang {
+            margin-top: 30px;
+            .service_item {
+                &.graphic {
+                    .service_pic {
+                        width: 181px;
+                        height: 147px;
+                        >svg {
+                            width: 181px;
+                            height: 147px;
+                        }
+                    }
+                }
+                &.ui {
+                    .service_pic {
+                        width: 161px;
+                        height: 132px;
+                        >svg {
+                            width: 161px;
+                            height: 132px;
+                        }
+                    }
+                }
+                &.web {
+                    .service_pic {
+                        width: 160px;
+                        height: 120px;
+                        >svg {
+                            width: 160px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &-top {
+            padding: 5vw 0 0;
+            &_logo {
+                width: 150px;
+            }
+        }
     }
 }
