@@ -1198,9 +1198,6 @@ input, textarea, button {
                     &-petstime {
                         width: 70px;
                     }
-                    &-pixui {
-                        width: 60px;
-                    }
                     &-walay {
                         width: 120px;
                     }
@@ -1218,12 +1215,6 @@ input, textarea, button {
                     }
                     &-naturelife {
                         width: 100px;
-                    }
-                    &-james {
-                        width: 100px;
-                    }
-                    &-fairsun {
-                        width: 140px;
                     }
                     &-sdb {
                         width: 60px;
@@ -1320,6 +1311,9 @@ input, textarea, button {
                     }
                     &-datung {
                         width: 80px;
+                    }
+                    &-afterwork {
+                        width: 120px;
                     }
                 }
             }
@@ -1438,7 +1432,6 @@ input, textarea, button {
         &_list {
             display: flex;
             position: relative;
-            // transition: $transition;
         }
         &_active {
             padding: 10px 35px;
@@ -1458,8 +1451,6 @@ input, textarea, button {
         }
         &.active {
             .works_tab {
-                &_inner {
-                }
                 &_active {
                     background-color: transparent;
                     padding: 15px 35px;
@@ -1498,7 +1489,6 @@ input, textarea, button {
         }
         &.scrolldown {
             background-color: $gray-100;
-            // box-shadow: $box-shaow;
             border-radius: 0 0 20px 20px;
             .works_tab {
                 &_item {

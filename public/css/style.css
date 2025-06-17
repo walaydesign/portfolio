@@ -1255,10 +1255,6 @@ input, textarea, button {
   width: 70px;
 }
 
-.works_pic_hover_logo.logo-pixui {
-  width: 60px;
-}
-
 .works_pic_hover_logo.logo-walay {
   width: 120px;
 }
@@ -1281,14 +1277,6 @@ input, textarea, button {
 
 .works_pic_hover_logo.logo-naturelife {
   width: 100px;
-}
-
-.works_pic_hover_logo.logo-james {
-  width: 100px;
-}
-
-.works_pic_hover_logo.logo-fairsun {
-  width: 140px;
 }
 
 .works_pic_hover_logo.logo-sdb {
@@ -1417,6 +1405,10 @@ input, textarea, button {
 
 .works_pic_hover_logo.logo-datung {
   width: 80px;
+}
+
+.works_pic_hover_logo.logo-afterwork {
+  width: 120px;
 }
 
 .works_pic_hover_catagory {
