@@ -433,42 +433,42 @@
 
         <section class="section contact" id="contact">
             <h2 class="title title-contact">联络我</h2>
-            <form action="" class="contact_form" data-aos="fade-up" data-aos-duration="500" onsubmit="sendEmail(); reset(); return false">
+            <form id="contact-form" class="contact_form" data-aos="fade-up" data-aos-duration="500">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">姓名*</label>
-                            <input type="text" class="contact_form_input" id="name" required>
+                            <input type="text" class="contact_form_input" id="name" name="name" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">信箱*</label>
-                            <input type="email" class="contact_form_input" id="email" required>
+                            <input type="email" class="contact_form_input" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Whatsapp</label>
-                            <input type="text" class="contact_form_input" id="whatsapp">
+                            <input type="text" class="contact_form_input" id="whatsapp" name="whatsapp">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="contact_form_item">
                             <label for="">Line ID</label>
-                            <input type="text" class="contact_form_input" id="lineid">
+                            <input type="text" class="contact_form_input" id="lineid" name="line">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="contact_form_item">
                             <label for="">标题</label>
-                            <input type="text" class="contact_form_input" id="title">
+                            <input type="text" class="contact_form_input" id="title" name="title">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="contact_form_item">
                             <label for="">內容*</label>
-                            <textarea class="contact_form_input" id="content" required></textarea>
+                            <textarea class="contact_form_input" id="content" name="content" required></textarea>
                         </div>
                     </div>
                 </div>
@@ -564,10 +564,30 @@
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/aos/aos.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="../public/js/common.js"></script>
-    <script src="../public/js/mail-en.js"></script>
     <script src="../public/js/index.js"></script>
+    <script>
+      (function () {
+        emailjs.init("3j4kNvskrhLw3SIso");
+      })();
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          emailjs.sendForm("service_eyyx1dp", "template_lo1b2mi", this).then(
+            () => {
+              alert("Thank you for your email, we will contact you soon!");
+              this.reset();
+            },
+            (error) => {
+              alert("Delivery failed. Please try again later.");
+            }
+          );
+        });
+    </script>
 
 </body>
 </html>
