@@ -1411,6 +1411,38 @@ input, textarea, button {
   width: 120px;
 }
 
+.works_pic_hover_logo.logo-carbonwalker {
+  width: 80px;
+}
+
+.works_pic_hover_logo.logo-bighide {
+  width: 60px;
+}
+
+.works_pic_hover_logo.logo-quinyi {
+  width: 120px;
+}
+
+.works_pic_hover_logo.logo-nozin {
+  width: 100px;
+}
+
+.works_pic_hover_logo.logo-beautifultimelyrain {
+  width: 80px;
+}
+
+.works_pic_hover_logo.logo-cranberry {
+  width: 100px;
+}
+
+.works_pic_hover_logo.logo-jk {
+  width: 200px;
+}
+
+.works_pic_hover_logo.logo-food-safe {
+  width: 160px;
+}
+
 .works_pic_hover_catagory {
   font-family: "Signika", sans-serif;
   font-weight: 700px;
