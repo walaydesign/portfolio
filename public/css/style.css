@@ -1423,6 +1423,10 @@ input, textarea, button {
   width: 160px;
 }
 
+.works_pic_hover_logo.logo-grace-joy {
+  width: 60px;
+}
+
 .works_pic_hover_catagory {
   font-family: "Signika", sans-serif;
   font-weight: 700px;
