@@ -117,7 +117,7 @@ button {
 }
 
 main {
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .header {
@@ -281,7 +281,6 @@ main {
       overflow: hidden;
       transition: $transition;
       border-top: 1px solid $gray-200;
-      // padding: 15px 0;
       visibility: hidden;
       z-index: 10;
       ul {
@@ -1657,6 +1656,10 @@ main {
     &.scrolldown {
       background-color: $gray-100;
       border-radius: 0 0 20px 20px;
+      // top: 70px;
+      // position: fixed;
+      // left: 0;
+      // width: 100%;
       .works_tab {
         &_item {
           border-radius: 0 0 15px 15px;
