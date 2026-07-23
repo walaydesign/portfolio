@@ -62,8 +62,8 @@ $(".gotoelement").click(function () {
   $("html, body").animate({ scrollTop: top }, 300);
   $(this).addClass("active");
 
-  $(".header_menu").removeClass("active");
-  $(".header_nav").removeClass("active");
+  $(".header__menu").removeClass("active");
+  $(".header__nav").removeClass("active");
   if ($(".header").hasClass("navshow")) {
     $(".header").removeClass("navshow");
   }
