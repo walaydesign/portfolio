@@ -3,13 +3,19 @@ $(".works__tab-active").click(function() {
     $(this).parents(".works__tab").toggleClass("active");
 })
 
+// let worksTabTop = $("#works__tab").offset().top - $(".header").height();
 resizeWorks();
 $(window).on("resize scroll",function(){
     resizeWorks();  
 })
 function resizeWorks() {
-    let worksTabTop = $("#works__tab").offset().top - $(".header").height();
-    if($(window).scrollTop()>=worksTabTop){
+    let worksTabTop =
+      $(".page-head").height() +
+      parseInt($(".page-head").css("padding-top")) +
+      + parseInt($(".page-head").css("padding-bottom")) + parseInt($(".page-head").css("margin-bottom")) -
+        $(".header").height();
+    // console.log("page-head height=" + $(".page-head").height());
+    if($(window).scrollTop() >= worksTabTop){
         $(".works__tab").addClass("scrolldown");
         $(".header").addClass("worksscrolldown");
     }else {
