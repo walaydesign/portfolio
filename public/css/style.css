@@ -1905,7 +1905,7 @@ button {
   .works__tab {
     padding: 0 20px;
   }
-  .works__tab__list {
+  .works__tab-list {
     display: none;
     position: absolute;
     padding: 15px 35px;
@@ -1914,7 +1914,7 @@ button {
     top: 100%;
     z-index: 1;
   }
-  .works__tab__item {
+  .works__tab-item {
     margin: 0;
     background-color: transparent;
     -webkit-transition: none;

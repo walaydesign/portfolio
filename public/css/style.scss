@@ -1773,7 +1773,7 @@ button {
     }
     &__tab {
       padding: 0 20px;
-      &__list {
+      &-list {
         display: none;
         position: absolute;
         padding: 15px 35px;
@@ -1782,7 +1782,7 @@ button {
         top: 100%;
         z-index: 1;
       }
-      &__item {
+      &-item {
         margin: 0;
         background-color: transparent;
         transition: none;
