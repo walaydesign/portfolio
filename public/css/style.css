@@ -14,19 +14,9 @@ body.tc {
 }
 
 body.tc .title,
-body.tc .page-title {
+body.tc .page-title, body.tc .hero__heading {
   font-family: "Noto Sans TC", system-ui;
-  font-weight: 700;
-}
-
-body.sc {
-  font-family: "Noto Sans SC", sans-serif;
-}
-
-body.sc .title,
-body.sc .page-title {
-  font-family: "Noto Sans SC", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 767px) {
@@ -87,6 +77,7 @@ button {
   transition: 0.3s ease-in-out;
   width: 100%;
   z-index: 10;
+  border-bottom: 1px solid transparent;
 }
 
 .header--inner .header__logo-w {
@@ -355,32 +346,32 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-.header__menu .header__menu-bar-top {
+.header__menu .header__menu-bar--top {
   -webkit-transform: translate(-50%, calc(-50% - 7px));
           transform: translate(-50%, calc(-50% - 7px));
 }
 
-.header__menu .header__menu-bar-middle {
+.header__menu .header__menu-bar--middle {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.header__menu .header__menu-bar-bottom {
+.header__menu .header__menu-bar--bottom {
   -webkit-transform: translate(-50%, calc(-50% + 7px));
           transform: translate(-50%, calc(-50% + 7px));
 }
 
-.header__menu.active .header__menu-bar-top {
+.header__menu.active .header__menu-bar--top {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.header__menu.active .header__menu-bar-middle {
+.header__menu.active .header__menu-bar--middle {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.header__menu.active .header__menu-bar-bottom {
+.header__menu.active .header__menu-bar--bottom {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
 }
@@ -479,7 +470,7 @@ button {
 
 @media screen and (min-width: 992px) {
   .header__lang:hover {
-    height: 161px;
+    height: 124px;
   }
   .header__lang:hover .header__lang-arrow {
     -webkit-transform: scaleY(-1);
@@ -579,7 +570,7 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    border-bottom: 1px solid #e1e1e1;
+    border-color: #e1e1e1;
     border-radius: 0;
   }
   .header.navshow .header__logo svg {
@@ -1620,15 +1611,16 @@ button {
 .works__text-category {
   font-size: 13px;
   margin: 0;
-  color: #1e969c;
+  color: #9d9d9d;
+  font-weight: 300;
 }
 
 .works__text-name {
   color: #343434;
   font-family: "Signika", sans-serif;
-  margin-bottom: 4px;
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 4px;
 }
 
 .works__more {
@@ -2004,7 +1996,7 @@ button {
   position: relative;
   z-index: 0;
   padding-bottom: 200px;
-  background-image: url(../img/about__bg.svg);
+  background-image: url(../img/about_bg.svg);
   background-size: 1112px;
   background-position: center 40%;
   background-repeat: no-repeat;
@@ -2120,13 +2112,13 @@ button {
   fill: #0057ff;
 }
 
-.about__link a:hover.about__link__linkedin svg path {
+.about__link a:hover.about__link--linkedin svg path {
   fill: #0b65c2;
 }
 
 @media screen and (max-width: 991px) {
   .about {
-    background-image: url(../img/about__bg-md.svg);
+    background-image: url(../img/about_bg-md.svg);
     background-size: 797px;
     background-position: center 83%;
   }
@@ -2138,7 +2130,7 @@ button {
     width: 100%;
     margin-bottom: 35px;
   }
-  .about__pic__text {
+  .about__pic-text {
     top: 25%;
   }
   .about__text {
@@ -2151,7 +2143,7 @@ button {
   .about {
     background-position: center 75%;
   }
-  .about__pic__text {
+  .about__pic-text {
     top: 20%;
   }
 }
@@ -2160,10 +2152,10 @@ button {
   .about {
     background-position: center 70%;
   }
-  .about__pic__text h3 {
+  .about__pic-text h3 {
     font-size: 24px;
   }
-  .about__pic__text p {
+  .about__pic-text p {
     font-size: 14px;
   }
 }
@@ -2175,19 +2167,15 @@ button {
   .about__pic-img--m {
     display: block;
   }
-  .about__pic__text {
+  .about__pic-text {
     top: 25%;
-  }
-  .about__pic__text h3,
-  .about__pic__text p {
-    -webkit-transform: translateX(-9%);
-            transform: translateX(-9%);
+    left: 56%;
   }
 }
 
 @media screen and (max-width: 410px) {
   .about {
-    background-image: url(../img/about__bg-sm.svg);
+    background-image: url(../img/about_bg-sm.svg);
     background-size: 500px;
     background-position: center 75%;
   }
@@ -2237,6 +2225,33 @@ button {
 .testimonials__content {
   -webkit-animation: wd-fade 0.45s cubic-bezier(0.4, 0, 0.2, 1);
           animation: wd-fade 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonials__content .reviewer {
+  padding: 0;
+  gap: 12px;
+  margin-top: 16px;
+  cursor: inherit;
+}
+
+.testimonials__content .reviewer:hover {
+  background-color: transparent;
+}
+
+.testimonials__content .reviewer__avatar {
+  width: 44px;
+}
+
+.testimonials__content .reviewer__info {
+  gap: 0;
+}
+
+.testimonials__content .reviewer__info .reviewer__name {
+  font-size: 16px;
+}
+
+.testimonials__content .reviewer__info .reviewer__role {
+  font-size: 12px;
 }
 
 .testimonials__quote-heading {
@@ -2404,26 +2419,6 @@ button {
   font-size: 13px;
   font-weight: 300;
   color: #878787;
-}
-
-@media screen and (max-width: 991px) {
-  .reviewer {
-    padding: 0;
-    gap: 12px;
-    margin-top: 16px;
-  }
-  .reviewer__avatar {
-    width: 44px;
-  }
-  .reviewer__info {
-    gap: 0;
-  }
-  .reviewer__info .reviewer__name {
-    font-size: 16px;
-  }
-  .reviewer__info .reviewer__role {
-    font-size: 12px;
-  }
 }
 
 .articles {
@@ -2802,14 +2797,6 @@ button {
   transition: 0.3s ease-in-out;
 }
 
-.sidebtn__item--btn-top:hover > span {
-  opacity: 0;
-}
-
-.sidebtn__item--btn-top:hover .sidebtn__top {
-  opacity: 1;
-}
-
 .sidebtn__icon {
   position: absolute;
   width: 18px;
@@ -2854,10 +2841,10 @@ button {
   .sidebtn__item:hover path {
     fill: #d08900;
   }
-  .sidebtn__item.btn-top:hover span {
+  .sidebtn__item--btn-top:hover > span {
     opacity: 0;
   }
-  .sidebtn__item.btn-top:hover .sidebtn__top {
+  .sidebtn__item--btn-top:hover .sidebtn__top {
     opacity: 1;
   }
 }

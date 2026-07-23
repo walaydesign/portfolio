@@ -61,9 +61,9 @@ $(".header__nav-lang-active").click(function() {
     $(this).parents(".header__nav-lang").find(".header__nav-lang-list").slideToggle(300);
 })
 
-$(".btn-top").click(function() {
-    $("html, body").animate({scrollTop:0},300);
-})
+$(".sidebtn__item--btn-top").click(function () {
+  $("html, body").animate({ scrollTop: 0 }, 300);
+});
 
 
 

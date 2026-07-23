@@ -25,36 +25,22 @@ function resizeWorks() {
 
 $(".works__tab-item").click(function() {
     $(this).addClass("active").siblings(".works__tab-item").removeClass("active");
-    if($(this).hasClass("works__tab-item--all")) {
-        $(".works__item-wrap").show();
-    }else if($(this).hasClass("works__tab-item--graphic")) {
-        $(".works__item-wrap").hide();
-        $(".works__item-wrap--graphic").show();
-    }else if($(this).hasClass("works__tab-item--ui")) {
-        $(".works__item-wrap").hide();
-        $(".works__item-wrap--ui").show();
-    }else if($(this).hasClass("works__tab-item--layout")) {
-        $(".works__item-wrap").hide();
-        $(".works__item-wrap--layout").show();
-    }else if($(this).hasClass("works__tab-item--wordpress")) {
-        $(".works__item-wrap").hide();
-        $(".works__item-wrap--wordpress").show();
+
+    const category = $(this).attr("class").match(/works__tab-item--(\S+)/)?.[1];
+    const $items = $(".works__item-wrap");
+
+    $items.stop(true).fadeOut(150).promise().done(function() {
+        const $target = category === "all" ? $items : $(`.works__item-wrap--${category}`);
+        $target.fadeIn(200);
+    });
+
+    const headHeight = $(".page-head").height() + ($(window).width() > 500 ? 175 : 120) * 2 + 50 - 70 + 1;
+    if ($(window).scrollTop() > headHeight) {
+        $("html, body").animate({ scrollTop: headHeight }, 100);
     }
 
-    let headHeight;
-    if($(window).width() > 500) {
-        headHeight = $(".page-head").height() + 175*2 + 50 - 70 + 1;
-    }else {
-        headHeight = $(".page-head").height() + 120*2 + 50 - 70 + 1;
-    }
-
-    if($(window).scrollTop() > headHeight) {
-        $("html, body").animate({scrollTop:headHeight},100);
-    }
-
-    if($(window).width() < 768) {
-        let worksActive = $(this).text();
-        $(".works__tab-active-text").text(worksActive);
+    if ($(window).width() < 768) {
+        $(".works__tab-active-text").text($(this).text());
         $(".works__tab-list").slideUp(300);
         $(".works__tab").removeClass("active");
     }
