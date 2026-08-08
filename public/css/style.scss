@@ -63,7 +63,8 @@ body {
   &.tc {
     font-family: $font-notoTC;
     .title,
-    .page-title, .hero__heading {
+    .page-title,
+    .hero__heading {
       font-family: $font-notoTC;
       font-weight: 900;
     }
@@ -774,6 +775,12 @@ button {
   overflow: hidden;
   border-radius: 40px;
   box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
+  .home-logo {
+    position: absolute;
+    width: 134px;
+    top: 32px;
+    left: 32px;
+  }
   &-wrapper {
     background: #f8ba43;
     padding: 40px;
@@ -781,7 +788,7 @@ button {
   &__background {
     position: absolute;
     inset: 0;
-    background: url(../img/hero-bg.png) center bottom / cover no-repeat;
+    background: url(../img/hero-bg.webp) center bottom / cover no-repeat;
     pointer-events: none;
     z-index: 0;
   }
@@ -886,7 +893,18 @@ button {
   @media screen and (max-width: 767px) {
     padding-top: 140px;
     &__background {
-      background-image: url(../img/hero-bg-m.png);
+      background-image: url(../img/hero-bg-m.webp);
+    }
+    .home-logo {
+      width: 100px;
+    }
+    &-wrapper--home {
+      .container {
+        padding: 0;
+      }
+      .hero {
+        padding: 100px 32px 40px;
+      }
     }
   }
   @media screen and (max-width: 500px) {
@@ -1469,6 +1487,9 @@ button {
         }
         &--SF {
           width: 120px;
+        }
+        &--ontheway {
+          width: 150px;
         }
       }
       &-category {
@@ -2081,28 +2102,27 @@ button {
   &__content {
     animation: wd-fade 0.45s $ease;
     .reviewer {
-    padding: 0;
-    gap: 12px;
-    margin-top: 16px;
-        cursor: inherit;
-        &:hover {
-          background-color: transparent;
-        }
-    &__avatar {
-      width: 44px;
-    }
-    &__info {
-      gap: 0;
-      .reviewer {
-        &__name {
-          font-size: 16px;
-        }
-        &__role {
-          font-size: 12px;
+      padding: 0;
+      gap: 12px;
+      margin-top: 16px;
+      cursor: inherit;
+      &:hover {
+        background-color: transparent;
+      }
+      &__avatar {
+        width: 44px;
+      }
+      &__info {
+        gap: 0;
+        .reviewer {
+          &__name {
+            font-size: 16px;
+          }
+          &__role {
+            font-size: 12px;
+          }
         }
       }
-    }
-
     }
   }
 
@@ -2573,16 +2593,16 @@ button {
           fill: $primary-800;
         }
       }
-    &--btn-top {
-      &:hover {
-        >span {
-          opacity: 0;
-        }
-        .sidebtn__top {
-          opacity: 1;
+      &--btn-top {
+        &:hover {
+          > span {
+            opacity: 0;
+          }
+          .sidebtn__top {
+            opacity: 1;
+          }
         }
       }
-    }
     }
   }
   @media screen and (max-width: 767px) {

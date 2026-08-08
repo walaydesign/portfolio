@@ -14,7 +14,8 @@ body.tc {
 }
 
 body.tc .title,
-body.tc .page-title, body.tc .hero__heading {
+body.tc .page-title,
+body.tc .hero__heading {
   font-family: "Noto Sans TC", system-ui;
   font-weight: 900;
 }
@@ -804,6 +805,13 @@ button {
           box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
+.hero .home-logo {
+  position: absolute;
+  width: 134px;
+  top: 32px;
+  left: 32px;
+}
+
 .hero-wrapper {
   background: #f8ba43;
   padding: 40px;
@@ -812,7 +820,7 @@ button {
 .hero__background {
   position: absolute;
   inset: 0;
-  background: url(../img/hero-bg.png) center bottom/cover no-repeat;
+  background: url(../img/hero-bg.webp) center bottom/cover no-repeat;
   pointer-events: none;
   z-index: 0;
 }
@@ -934,7 +942,16 @@ button {
     padding-top: 140px;
   }
   .hero__background {
-    background-image: url(../img/hero-bg-m.png);
+    background-image: url(../img/hero-bg-m.webp);
+  }
+  .hero .home-logo {
+    width: 100px;
+  }
+  .hero-wrapper--home .container {
+    padding: 0;
+  }
+  .hero-wrapper--home .hero {
+    padding: 100px 32px 40px;
   }
 }
 
@@ -1567,6 +1584,10 @@ button {
 
 .works__pic-hover-logo--SF {
   width: 120px;
+}
+
+.works__pic-hover-logo--ontheway {
+  width: 150px;
 }
 
 .works__pic-hover-category {
