@@ -1049,7 +1049,7 @@
 
       <section class="section contact" id="contact">
         <h2 class="title title--contact">聯絡我</h2>
-        <form
+        <!-- <form
           id="contact-form"
           class="contact__form"
           data-aos="fade-up"
@@ -1103,6 +1103,91 @@
               </div>
             </div>
           </div>
+          <button>
+            <span>傳送</span>
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.17738 4.49046L18.8451 9.29091C19.6093 9.63475 20.2474 9.9219 20.7214 10.1887C21.1827 10.4482 21.6916 10.7938 21.9644 11.3455C22.324 12.073 22.324 12.9265 21.9644 13.654C21.6916 14.2057 21.1827 14.5513 20.7214 14.8109C20.2474 15.0776 19.6093 15.3648 18.8451 15.7087L8.19564 20.5009C7.41187 20.8536 6.75916 21.1473 6.23496 21.329C5.72729 21.5048 5.12037 21.6604 4.51947 21.4927C3.7305 21.2726 3.09112 20.694 2.79341 19.931C2.56667 19.3497 2.66105 18.7303 2.78548 18.2076C2.91395 17.6679 3.14118 16.9893 3.41402 16.1743L4.47684 12.9996C4.58756 12.6688 4.59506 12.6323 4.59859 12.6053C4.60197 12.5795 4.6034 12.5535 4.60288 12.5274C4.6025 12.5088 4.60114 12.4902 4.59876 12.4717C4.5953 12.4447 4.5879 12.4082 4.47802 12.0772L3.39306 8.80839C3.12317 7.99528 2.89832 7.31791 2.77159 6.77924C2.64876 6.25721 2.55633 5.63897 2.78374 5.05915C3.08247 4.29746 3.7218 3.72046 4.51002 3.50113C5.11005 3.33418 5.71562 3.4893 6.22236 3.66484C6.74525 3.84597 7.39611 4.13887 8.17738 4.49046ZM6.49249 13.5415H11.9792C12.5545 13.5415 13.0208 13.0751 13.0208 12.4998C13.0208 11.9245 12.5545 11.4581 11.9792 11.4581H6.46767C6.46353 11.4458 6.45941 11.4334 6.45529 11.421L5.38639 8.20049C5.09631 7.32653 4.90225 6.73864 4.79954 6.30209C4.71615 5.94764 4.72792 5.82199 4.72873 5.80635C4.78871 5.66516 4.90795 5.55754 5.05454 5.51231C5.07018 5.5131 5.19637 5.51423 5.54045 5.63342C5.9642 5.7802 6.52919 6.03333 7.36892 6.41121L17.9438 11.1699C18.7664 11.54 19.3174 11.7891 19.6996 12.0042C20.0093 12.1785 20.0919 12.27 20.1026 12.2812C20.1668 12.4198 20.1668 12.5797 20.1027 12.7184C20.0919 12.7295 20.0093 12.8211 19.6996 12.9953C19.3174 13.2104 18.7664 13.4595 17.9438 13.8296L7.38714 18.5801C6.54492 18.9592 5.97804 19.2131 5.55294 19.3604C5.20771 19.48 5.0811 19.4812 5.06541 19.482C4.91877 19.4366 4.7996 19.3288 4.7398 19.1873C4.73904 19.1717 4.72756 19.0455 4.81218 18.6901C4.91637 18.2524 5.1126 17.6631 5.40578 16.7873L6.45241 13.661C6.45859 13.6424 6.46479 13.624 6.471 13.6055C6.47817 13.5842 6.48535 13.5628 6.49249 13.5415Z"
+                fill="#AF7400"
+              />
+            </svg>
+          </button>
+        </form> -->
+
+        <form
+          id="contact-form"
+          class="contact__form"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          action="https://formsubmit.co/ajax/ee1d5aeed57736b1f27be5453508aa96"
+          method="POST"
+        >
+          <div class="row">
+            <div class="col-md-6">
+              <div class="contact__form-item">
+                <label for="">姓名*</label>
+                <input
+                  type="text"
+                  class="contact__form-input"
+                  id="name"
+                  name="name"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="contact__form-item">
+                <label for="">電子郵件*</label>
+                <input
+                  type="email"
+                  class="contact__form-input"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="contact__form-item">
+                <label for="">主旨</label>
+                <input
+                  type="text"
+                  class="contact__form-input"
+                  id="title"
+                  name="title"
+                />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="contact__form-item">
+                <label for="">內容*</label>
+                <textarea
+                  class="contact__form-input"
+                  id="content"
+                  name="content"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- FormSubmit options -->
+          <input type="hidden" name="_subject" value="Walay Design Enquiry" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input
+            type="hidden"
+            name="_url"
+            value="https://walaydesign.com/zh-Hant/"
+          />
+          <input type="hidden" name="_cc" value="walayydesign@gmail.com" />
           <button>
             <span>傳送</span>
             <svg
@@ -1349,13 +1434,13 @@
     <script src="../public/js/jquery/jquery.min.js"></script>
     <script src="../public/js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../public/js/aos/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script> -->
     <script src="../public/js/count/noframework.waypoints.min.js"></script>
     <script src="../public/js/count/countUp.umd.js"></script>
     <script src="../public/js/swiper/swiper-bundle.min.js"></script>
     <script src="../public/js/common.js"></script>
     <script src="../public/js/index.js"></script>
-    <script>
+    <!-- <script>
       (function () {
         emailjs.init("3j4kNvskrhLw3SIso");
       })();
@@ -1375,6 +1460,45 @@
             },
           );
         });
+    </script> -->
+
+    <script>
+      const form = document.querySelector("#contact-form");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const button = form.querySelector("button");
+        const buttonText = button.querySelector("span");
+
+        buttonText.textContent = "傳送中...";
+        button.disabled = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            alert("感謝您的來信，我們將盡快與您聯繫！");
+            form.reset();
+            buttonText.textContent = "傳送";
+          } else {
+            alert("傳送失敗，請稍後再試。");
+            buttonText.textContent = "傳送";
+          }
+        } catch (error) {
+          console.error(error);
+          alert("傳送失敗，請稍後再試。");
+          buttonText.textContent = "傳送";
+        } finally {
+          button.disabled = false;
+        }
+      });
     </script>
   </body>
 </html>
